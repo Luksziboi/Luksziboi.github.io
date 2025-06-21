@@ -22,10 +22,12 @@ form.addEventListener('submit', e => {
 render();
 
 <script>
-  const toggle = document.querySelector('.nav-toggle');
-  const menu   = document.querySelector('.nav ul');
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn  = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
   });
 </script>
