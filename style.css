@@ -163,7 +163,11 @@ footer .footer-content {
   padding: 0.5rem;
 }
 
-
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
 .nav-toggle .hamburger {
   display: block;
   width: 25px;
@@ -176,6 +180,11 @@ footer .footer-content {
  
   .nav-toggle {
     display: block;
+	  display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
   }
 
 
@@ -191,7 +200,13 @@ footer .footer-content {
     padding: 1rem 0;
     list-style: none;
   }
-
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #fff;
+    transition: 0.3s;
  
   .nav ul.active {
     display: flex;
@@ -206,5 +221,29 @@ footer .footer-content {
     color: #fff;
     font-size: 1.1rem;
     text-decoration: none;
+  }
+}
+
+ .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 1rem 0;
+  }
+  .nav-menu li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  .nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
   }
 }
