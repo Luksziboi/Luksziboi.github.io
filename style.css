@@ -1,0 +1,210 @@
+*, *::before, *::after { box-sizing: border-box; }
+.hidden { display: none; }
+body {
+  margin: 0; padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative; min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.overlay { position: absolute; inset: 0; background: rgba(245,233,221,0.6); z-index:1; }
+.nav { position: relative; z-index:2; display:flex; justify-content:space-between; align-items:center;
+  padding:20px; background: rgba(255,255,255,0.85);
+}
+.nav .logo { font-size:1.5em; font-weight:bold; text-decoration:none; color:#333; }
+.nav ul { list-style:none; display:flex; gap:15px; margin:0; padding:0; }
+.nav a { text-decoration:none; color:#333; text-transform:uppercase; font-size:0.9em; padding:8px 12px; }
+.nav a:hover { color:#555; }
+.hero { padding:100px 20px; text-align:center; position: relative; z-index:2; }
+.hero h1 { font-size:3em; margin:0; text-transform:uppercase; }
+.hero p { margin:10px 0; font-size:1.2em; }
+.btn { display:inline-block; padding:16px 32px; background:#e2c2c0; color:#333; text-transform:uppercase;
+  text-decoration:none; border-radius:4px; font-size:1.1em; transition: transform 0.2s;
+}
+.btn:hover { transform: scale(1.05); }
+main { z-index:2; position: relative; }
+
+
+.services { padding:60px 20px; background: rgba(255,255,255,0.9); }
+.services h2 { text-align:center; margin-bottom:40px; }
+.cards { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.card { background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  flex:1 1 200px; text-align:center; transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-10px); }
+
+
+.gallery { padding:60px 20px; }
+.gallery h2 { text-align:center; margin-bottom:40px; color:#fff; }
+.gallery .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+.gallery img { width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s; }
+.gallery img:hover { transform: scale(1.05); }
+
+
+.testimonials { padding:60px 20px; background: rgba(255,255,255,0.9); }
+.testimonials h2 { text-align:center; margin-bottom:30px; }
+.testimonials blockquote { font-style:italic; margin:10px auto; max-width:600px; position:relative;
+  padding:20px; border-left:4px solid #e2c2c0;
+}
+.testimonials cite { display:block; text-align:right; margin-top:10px; font-weight:bold; }
+
+
+footer { background:#333; color:#fff; padding:10px; text-align:center; }
+footer p { margin:1px 0; font-size:0.9em; }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #aaa;   
+  text-align: center;
+  padding: 1rem 2rem;
+  z-index: 1000;      
+}
+footer {
+  background: #aaa;       
+  text-align: center;
+  padding: 1rem 2rem;     
+}
+
+.reservation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: calc(100vh - 200px); 
+}
+
+.reservation-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.reservation-card h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.reservation-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.reservation-form input,
+.reservation-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.reservation-form .btn {
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.gallery {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery .grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.reservation-cta,
+.cta,
+.booking-cta,
+footer .footer-content {
+  text-align: center;
+}
+
+.reservation-cta .btn,
+.cta .btn,
+.booking-cta .btn {
+  display: inline-block;
+  margin: 0 auto;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+
+.nav-toggle .hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #fff; 
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 480px) {
+ 
+  .nav-toggle {
+    display: block;
+  }
+
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100%;       
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    list-style: none;
+  }
+
+ 
+  .nav ul.active {
+    display: flex;
+  }
+
+ 
+  .nav ul li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .nav ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+}
