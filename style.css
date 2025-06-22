@@ -1,3 +1,4 @@
+
 *, *::before, *::after { box-sizing: border-box; }
 .hidden { display: none; }
 body {
@@ -54,7 +55,7 @@ main { z-index:2; position: relative; }
 
 
 footer { background:#333; color:#fff; padding:10px; text-align:center; }
-footer p { margin:0.5px 0; font-size:0.5em; }
+footer p { margin:1px 0; font-size:0.9em; }
 footer {
   position: fixed;
   bottom: 0;
@@ -62,9 +63,14 @@ footer {
   width: 100%;
   background: #aaa;   
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   z-index: 1000;      
-
+}
+footer {
+  background: #aaa;       
+  text-align: center;
+  padding: 1rem 2rem;     
+}
 
 .reservation-section {
   display: flex;
